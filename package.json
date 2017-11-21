@@ -1,0 +1,19 @@
+{
+  "name": "newshub",
+  "version": "1.0.0",
+  "description": "news hub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elena-m/newshub.git"
+  },
+  "author": "Elena Miliuts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elena-m/newshub/issues"
+  },
+  "homepage": "https://github.com/elena-m/newshub#readme"
+}
