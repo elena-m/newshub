@@ -11,19 +11,26 @@ body {
     background-color: rgb(206, 206, 206);
 }
 
-.header a {
+.header li {
     float: left;
     display: block;
     color: gray;
     text-align: center;
-    text-decoration: none;
+    
     padding: 20px 0px;
     width: 33.33%;
+}
+
+.header li a {
+    text-decoration: none;
+    color: gray;
 }
 
 .navbar {
     overflow: hidden;
     background-color: gray;
+    position: sticky;
+    top: 0;
 }
 
 .navbar a {
