@@ -17,8 +17,6 @@ function updateTime() {
     document.getElementById("time").innerText = currentTime;
 } 
 
-setInterval(updateTime, 1000);
-
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -31,4 +29,9 @@ function loadDoc() {
     xhttp.send();
 }
 
-document.addEventListener('DOMContentLoaded', loadDoc);
+function init() {
+    setInterval(updateTime, 1000);
+    loadDoc();
+}
+
+document.addEventListener('DOMContentLoaded', init);
