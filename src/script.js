@@ -31,7 +31,18 @@ function loadDoc() {
 
 function init() {
     setInterval(updateTime, 1000);
+    loadUserCity();
+    document.getElementById("userCity").addEventListener("keyup", saveUserCity);
     loadDoc();
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+function loadUserCity() {
+    document.getElementById("userCity").value = localStorage.getItem("city");
+}
+
+function saveUserCity() {
+    localStorage.city = document.getElementById("userCity").value;
+}
+
