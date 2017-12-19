@@ -2,9 +2,12 @@
   "name": "newshub",
   "version": "1.0.0",
   "description": "news hub",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/elena-m/newshub/issues"
   },
-  "homepage": "https://github.com/elena-m/newshub#readme"
+  "homepage": "https://github.com/elena-m/newshub#readme",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17"
+  }
 }
