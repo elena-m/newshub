@@ -1,6 +1,7 @@
 import React from 'react';
 import Time from './Time';
 import UserCity from './UserCity';
+import './index.less';
 
 export default class Header extends React.Component {
     render() {
@@ -8,7 +9,7 @@ export default class Header extends React.Component {
             <div className="header">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="">
                             <img src="#" alt="logo" width="auto" height="auto"/>
                         </a>
                     </li>
@@ -19,7 +20,7 @@ export default class Header extends React.Component {
                         <UserCity />
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="">
                             Weather
                         </a>
                     </li>
