@@ -1,14 +1,22 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
-body {
-    margin: 0;
+#root {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .header {
     overflow: hidden;
     background-color: rgb(206, 206, 206);
+    min-height: 55px;
 }
 
 .header li {
@@ -32,6 +40,7 @@ body {
     top: 0;
     /* border-bottom: 1px solid rgb(146, 146, 146); */
     box-shadow: 0px 2px 3px black;
+    min-height: 45px;
 }
 
 .navbar a {
@@ -49,30 +58,31 @@ body {
     color: gray;
 }
 
+.news {
+    flex-grow: 1;
+    display: flex;
+    align-items: baseline;
+}
+
 .column1,
 .column3 {
-    float: left;
-    width: 15%;
     padding: 15px;
+    min-width: 15%;
+    max-width: 15%;
 }
 
 .column2 {
-    float: left;
-    width: 70%;
     padding: 15px;
     background-color: rgb(245, 243, 243);
-}
-
-.sections:after {
-    content: "";
-    display: block;
-    clear: both;
+    margin-bottom: 40px;
 }
 
 .footer {
     background-color: rgb(206, 206, 206);
-    position: sticky;
+    position: fixed;
+    left: 0;
     bottom: 0;
+    width: 100%;
     /* border-top: 1px solid rgb(184, 182, 182); */
     box-shadow: 0px -1px 4px black;
 }
@@ -98,4 +108,9 @@ body {
 
 #year {
     float: right;
+}
+
+.column2 img {
+    float: left;
+    margin: 5px 10px 10px 0;
 }
