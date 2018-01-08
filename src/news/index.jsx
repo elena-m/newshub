@@ -1,29 +1,27 @@
 import React from 'react';
+import axios from 'axios';
 import './index.less';
 
 export default class News extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            article: 'loading...'
+            article: 'loading...',
+            paragraphs: []
         };
-
     }
 
     componentDidMount() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (xhttp.readyState == 4 && xhttp.status == 200) {
+        axios.get('/api/paragraphs')
+            .then((response) => {
                 this.setState({
-                    article: xhttp.responseText
+                    paragraphs: response.data
                 });
-            }
-        }.bind(this);
-        xhttp.open("GET", "paragraphs.html", true);
-        xhttp.send();
+            });
     }
-    
+
     render() {
+        const paragraphs = this.state.paragraphs;
         return (
             <div className="news">
                 <div className="column1">
@@ -32,7 +30,8 @@ export default class News extends React.Component {
                 <div className="column2">
                     <h2>Headline</h2>
                     <img src="https://static.pexels.com/photos/247932/pexels-photo-247932.jpeg" alt="image" width="50%" />
-                    <article dangerouslySetInnerHTML={{__html: this.state.article}}>
+                    <article>
+                        {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
                     </article>
                 </div>
                 <div className="column3">
